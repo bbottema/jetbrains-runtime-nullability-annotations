@@ -1,5 +1,17 @@
+[![APACHE v2 License](https://img.shields.io/badge/license-apachev2-blue.svg?style=flat)](LICENSE-2.0.txt) 
+[![Latest Release](https://img.shields.io/maven-central/v/com.github.bbottema/jetbrains-runtime-annotations.svg?style=flat)](http://search.maven.org/#search%7Cgav%7C1%7Cg%3A%22com.github.bbottema%22%20AND%20a%3A%22jetbrains-runtime-annotations%22)
+
 # jetbrains-runtime-nullability-annotations
 The well-known Jetbrains nullability annotations, but with RUNTIME retention
+
+```
+<dependency>
+  <groupId>com.github.bbottema</groupId>
+  <artifactId>jetbrains-runtime-annotations</artifactId>
+  <version>1.0.0</version>
+  <scope>provided</scope>
+</dependency>
+```
 
 ## Why
 There are currently no nullability annotations available that are available for reflection in runtime. The community used to have the `javax.annotation.Nullable` from FindBugs' and later SpotBugs' [JSR305](https://stackoverflow.com/questions/2289694/what-is-the-status-of-jsr-305) implementation, but as that uses the same packages as the JDK, with Java's modularization, this can [cause the split-package](https://github.com/google/guava/issues/2960) problem.

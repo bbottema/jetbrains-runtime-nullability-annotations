@@ -1,0 +1,16 @@
+version: 2.1
+
+orbs:
+  github-maven-deploy: github-maven-deploy/github-maven-deploy@1.0.5
+
+workflows:
+  workflow:
+    jobs:
+      - github-maven-deploy/build-and-test:
+          mvn-build-test-command: mvn verify -Dmaven.javadoc.skip=true
+
+      - github-maven-deploy/deploy-major-version:
+          requires:
+            - github-maven-deploy/build-and-test
+          mvn-deploy-command: mvn -s .circleci/maven-release-settings.xml clean deploy -DdeployAtEnd=true -DperformRelease=true -DskipTests -Dspotbugs.skip=true
+          context: RELEASE_PROFILE_BBOTTEMA
