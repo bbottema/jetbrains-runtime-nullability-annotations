@@ -21,4 +21,4 @@ Modern IDE's natively handle these annotations and common static analyses (like 
 That leaves us with the Jetbrains annotations, but they are limited to CLASS retention and its developers [have no plans to change this](https://intellij-support.jetbrains.com/hc/en-us/community/posts/206984375-Runtime-retention-of-Nullable-for-dependency-injection). They in fact suggest to recompile them with RUNTIME retention.
 
 ## How
-This library simply copies the source code for the Jetbrains nullability annotations and changes the retention from CLASS to RUNTIME
+This library simply copies the source code for the Jetbrains nullability annotations (only @NotNull and @Nullable) and changes the retention from CLASS to RUNTIME
