@@ -4,6 +4,11 @@ https://github.com/bbottema/jetbrains-runtime-nullability-annotations
 RELEASE NOTES jetbrains-runtime-nullability-annotations
 
 
+v1.0.1 (28-December-2021)
+
+- Updated parent pom, which updated the test-scoped log4j dependencies to take care of the recent security issues
+
+
 v1.0.0 (9-November-2019)
 
 - Initial upload
