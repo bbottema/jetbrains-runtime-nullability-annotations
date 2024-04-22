@@ -5,8 +5,8 @@
 
 	<parent>
 		<groupId>com.github.bbottema</groupId>
-		<artifactId>standard-project-parent</artifactId>
-		<version>1.0.39</version>
+		<artifactId>standard-project-parent-nodeps</artifactId>
+		<version>1.0.1</version>
 	</parent>
 
 	<artifactId>jetbrains-runtime-annotations</artifactId>
@@ -20,7 +20,6 @@
 	<properties>
 		<license.owner.name>Benny Bottema</license.owner.name>
 		<license.owner.email>benny@bennybottema.com</license.owner.email>
-		<excludeCommonDeps>true</excludeCommonDeps>
 	</properties>
 
 	<scm>
